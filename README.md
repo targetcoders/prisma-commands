@@ -30,3 +30,13 @@ Open `prisma/schema.prisma` and define your `model` types, datasource (database 
 No command here — this is where you design your DB blueprint.
 
 ---
+
+## 3. Generate Prisma Client
+
+```bash
+npx prisma generate
+```
+
+Generates (or regenerates) the Prisma Client JS/TS library used by your app to query the database. Run after changing `schema.prisma` or after installing/updating Prisma packages.
+
+---
