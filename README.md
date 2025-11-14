@@ -23,3 +23,10 @@ npx prisma init
 Creates the `prisma/` folder, a starter `schema.prisma`, and a `.env` template. Run this once when you first add Prisma to a project.
 
 ---
+## 2. Edit `schema.prisma`
+
+Open `prisma/schema.prisma` and define your `model` types, datasource (database connection), and generator (Prisma Client).
+
+No command here — this is where you design your DB blueprint.
+
+---
