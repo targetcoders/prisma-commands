@@ -114,3 +114,13 @@ npx prisma migrate reset
 Drops all data, re-applies all migrations, and (optionally) runs the seed script. Useful to get a clean local DB.
 
 ---
+
+## 10. Production: apply existing migrations
+
+```bash
+npx prisma migrate deploy
+```
+
+Applies the already-committed migrations to the target (staging/production) database. **Does not** create new migrations. This command is what your CI/CD or deployment scripts should run.
+
+---
