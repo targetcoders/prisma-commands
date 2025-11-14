@@ -134,3 +134,13 @@ npx prisma migrate diff --from-schema-datamodel prisma/schema.prisma --to-schema
 Creates a SQL diff between two schemas or between a schema and a live DB. Useful for advanced auditing or custom migration pipelines.
 
 ---
+
+## 12. Best practices (short)
+
+- **Always commit** `prisma/migrations/` to version control. Migrations are your schema history.
+- Run `prisma generate` as part of your build step so the Prisma Client is up-to-date.
+- Use `migrate dev` in development, `migrate deploy` in production. Avoid `db push` in production.
+- Add `prisma db seed` to CI if tests require seeded data.
+- Backup production DB before running migrations and test migrations in staging first.
+
+---
