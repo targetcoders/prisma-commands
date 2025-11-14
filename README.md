@@ -52,3 +52,25 @@ npx prisma migrate dev --name <descriptive-name>
 **When to use:** local development while building schema changes. The first migration is commonly named `init`. Like `npx prisma migrate dev --name init`
 
 ---
+
+## 5. Seed the database (optional but common)
+
+Add a seed script to `package.json`, for example:
+
+```json
+{
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  }
+}
+```
+
+Then run:
+
+```bash
+npx prisma db seed
+```
+
+Seeds populate tables with initial or test data. Useful after a fresh migration or in CI for integration tests.
+
+---
