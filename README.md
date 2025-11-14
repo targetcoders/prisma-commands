@@ -84,3 +84,13 @@ npx prisma studio
 Opens Prisma Studio — a lightweight UI to browse and edit data in your development DB.
 
 ---
+
+## 7. Syncing an existing database (introspection)
+
+```bash
+npx prisma db pull
+```
+
+Reads the schema from an existing DB and updates `schema.prisma` (useful when adopting Prisma for an existing project).
+
+---
