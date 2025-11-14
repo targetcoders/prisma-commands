@@ -1,4 +1,4 @@
-# Prisma Commands | Prisma Workflow — step‑by‑step
+# Prisma Commands | Prisma Workflow 
 
 A Practical Prisma Workflow Step by Step | Prisma ORM | Prisma All Commands
 ---
@@ -102,5 +102,15 @@ npx prisma db push
 ```
 
 Writes the `schema.prisma` to the DB directly **without** creating migration files. Handy for prototyping but **not** recommended for production workflows where migration history is important.
+
+---
+
+## 9. Reset your development DB
+
+```bash
+npx prisma migrate reset
+```
+
+Drops all data, re-applies all migrations, and (optionally) runs the seed script. Useful to get a clean local DB.
 
 ---
